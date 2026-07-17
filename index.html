@@ -135,23 +135,31 @@
     .btn-small { min-height:42px; padding:8px 17px; }
 
     .hero { position:relative; overflow:hidden; padding:62px 0 60px; background:linear-gradient(135deg,#fff 0%,#fffdf0 52%,#f4f5fb 100%); }
+    .hero .container { width:min(calc(100% - 40px),1240px); }
     .hero:before,.hero:after { content:""; position:absolute; border-radius:50%; pointer-events:none; }
     .hero:before { width:420px; height:420px; top:-240px; right:-80px; background:rgba(255,230,0,.28); }
     .hero:after { width:280px; height:280px; bottom:-190px; left:-90px; border:54px solid rgba(33,41,88,.05); }
-    .hero-grid { position:relative; display:grid; grid-template-columns:1.2fr .8fr; align-items:center; gap:46px; }
+    .hero-grid { position:relative; display:grid; grid-template-columns:.9fr 1.1fr; align-items:center; gap:34px; }
     .eyebrow { margin:0 0 14px; color:#525d9e; font-size:14px; font-weight:900; letter-spacing:.08em; }
     .hero h1 { margin:0; color:var(--navy-dark); font-size:clamp(38px,4.6vw,56px); line-height:1.16; letter-spacing:-.04em; }
     .hero h1 strong { position:relative; color:var(--navy); }
     .hero h1 strong:after { content:""; position:absolute; left:0; right:0; bottom:3px; height:12px; background:var(--yellow); z-index:-1; border-radius:9px; }
-    .hero-copy { max-width:590px; margin:20px 0 0; color:#4f566d; font-size:17px; }
+    .achievement-title { display:grid; gap:13px; font-size:clamp(28px,3.3vw,39px) !important; }
+    .achievement-title > span { display:block; }
+    .achievement-title em { display:inline-block; margin-left:8px; padding:5px 10px; border-radius:9px; background:var(--navy); color:var(--yellow); font-size:.43em; font-style:normal; letter-spacing:-.02em; vertical-align:middle; }
+    .hero-copy { max-width:590px; margin:18px 0 0; color:#4f566d; font-size:16px; }
     .hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:32px; }
     .hero-note { margin-top:18px; color:var(--muted); font-size:13px; }
-    .hero-visual { position:relative; width:100%; max-width:380px; justify-self:end; }
-    .hero-photo { border-radius:26px; overflow:hidden; box-shadow:var(--shadow); background:transparent; }
-    .hero-photo img { width:100%; height:285px; object-fit:cover; }
-    .hero-badge { position:absolute; left:-18px; bottom:18px; width:170px; padding:14px 16px; border:1px solid rgba(255,255,255,.8); border-radius:16px; background:rgba(255,255,255,.95); box-shadow:0 14px 32px rgba(21,27,63,.14); }
-    .hero-badge b { display:block; color:var(--navy); font-size:19px; }
-    .hero-badge span { color:var(--muted); font-size:13px; }
+    .hero-visual { position:relative; width:100%; max-width:550px; margin-bottom:32px; justify-self:end; }
+    .hero-photo { display:grid; grid-template-columns:1fr 1fr; gap:7px; padding:7px; border-radius:26px; overflow:hidden; box-shadow:var(--shadow); background:#fff; }
+    .hero-photo img { width:100%; height:205px; object-fit:cover; }
+    .hero-photo img:nth-child(1) { border-radius:19px 5px 5px 5px; }
+    .hero-photo img:nth-child(2) { border-radius:5px 19px 5px 5px; }
+    .hero-photo img:nth-child(3) { border-radius:5px 5px 5px 19px; }
+    .hero-photo img:nth-child(4) { border-radius:5px 5px 19px 5px; }
+    .hero-caption { position:absolute; left:18px; bottom:-30px; width:175px; padding:14px 16px; border:1px solid rgba(255,255,255,.9); border-radius:16px; background:#fff; color:var(--text); box-shadow:0 14px 32px rgba(21,27,63,.14); }
+    .hero-caption b { display:block; color:var(--navy); font-size:19px; }
+    .hero-caption span { display:block; margin-top:2px; color:var(--muted); font-size:12px; line-height:1.5; }
 
     .stats-wrap { position:relative; margin-top:-1px; background:var(--navy); color:#fff; }
     .stats { display:grid; grid-template-columns:repeat(4,1fr); }
@@ -188,6 +196,14 @@
     .reason-item b { display:block; margin-bottom:4px; color:var(--navy); }
     .reason-item span { color:var(--muted); font-size:13px; }
     .reason-copy .btn { margin-top:28px; }
+    .ai-principles { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:34px; }
+    .ai-principle { padding:24px; border:1px solid var(--line); border-radius:var(--radius); background:#fff; }
+    .ai-principle b { display:block; margin-bottom:8px; color:var(--navy-dark); font-size:19px; }
+    .ai-principle p { margin:0; color:var(--muted); font-size:14px; }
+    .age-roadmap { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:20px; }
+    .age-step { padding:18px; border-radius:16px; background:var(--navy); color:#fff; }
+    .age-step strong { display:block; color:var(--yellow); font-size:17px; }
+    .age-step span { display:block; margin-top:5px; color:rgba(255,255,255,.76); font-size:13px; }
 
     .roadmap { display:grid; grid-template-columns:repeat(4,1fr); position:relative; gap:16px; }
     .roadmap:before { content:""; position:absolute; top:31px; left:10%; right:10%; height:2px; background:#dfe2ee; }
@@ -246,6 +262,7 @@
 
     @media (max-width:820px) {
       .container { width:min(calc(100% - 30px),var(--max)); }
+      .hero .container { width:min(calc(100% - 30px),var(--max)); }
       .nav-toggle { display:block; }
       .nav-links { position:absolute; top:72px; left:0; right:0; display:none; padding:16px 20px 22px; flex-direction:column; align-items:stretch; gap:4px; background:#fff; border-bottom:1px solid var(--line); box-shadow:0 16px 30px rgba(21,27,63,.08); }
       .nav-links.open { display:flex; }
@@ -254,12 +271,12 @@
       .hero { padding:50px 0 56px; }
       .hero-grid { grid-template-columns:1fr; }
       .hero-visual { max-width:420px; justify-self:start; }
-      .hero-badge { left:16px; }
       .stats { grid-template-columns:1fr 1fr; }
       .stat:nth-child(2) { border-right:0; }
       .stat:nth-child(-n+2) { border-bottom:1px solid rgba(255,255,255,.12); }
       .section { padding:64px 0; }
       .reason-grid { grid-template-columns:1fr; }
+      .ai-principles,.age-roadmap { grid-template-columns:1fr; }
       .principal { width:220px; }
       .project-grid { grid-template-columns:1fr 1fr; }
       .cta-inner { align-items:flex-start; flex-direction:column; }
@@ -271,10 +288,11 @@
       body { word-break:normal; }
       .logo img { width:160px; }
       .hero h1 { font-size:36px; }
+      .achievement-title { font-size:27px !important; gap:16px; }
+      .achievement-title em { display:table; margin:7px 0 0; font-size:15px; }
       .hero-copy { font-size:16px; }
       .hero-actions .btn { width:100%; }
       .hero-photo img { height:auto; aspect-ratio:4/3; }
-      .hero-badge { right:14px; left:14px; bottom:14px; width:auto; }
       .stat { padding:22px 10px; }
       .stat strong { font-size:25px; }
       .focus-grid,.project-grid,.results-grid { grid-template-columns:1fr; }
@@ -325,10 +343,13 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div>
-          <p class="eyebrow">은평구 초·중·고 코딩 전문교육</p>
-          <h1>아이의 생각을<br /><strong>프로젝트로 완성</strong>합니다</h1>
+          <p class="eyebrow">써니코딩컴퓨터가 증명한 교육 성과</p>
+          <h1 class="achievement-title">
+            <span><strong>6년 연속</strong> SW영재원 합격 <em>합격률 95%</em></span>
+            <span><strong>4년 연속</strong> 선린인터넷고 합격 <em>합격률 90%</em></span>
+          </h1>
           <p class="hero-copy">
-            기초 코딩부터 파이썬·AI 프로젝트, 정보 수행평가·세특, SW영재원과 IT 진학까지 학생의 속도와 목표에 맞춘 1:1 로드맵으로 연결합니다.
+            AI 시대, 코딩으로 우리 아이의 경쟁력을 키워주세요. 현직 개발자 부모님이 선택한 초·중·고 AI 창의융합코딩 전문 교육기관입니다.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="curriculum.html">교육과정 보기</a>
@@ -339,9 +360,12 @@
 
         <div class="hero-visual" aria-label="써니코딩 수업과 프로젝트">
           <div class="hero-photo">
-            <img src="{{$template}}/img/main/sunnycoding_back02.jpg" alt="써니코딩컴퓨터 프로젝트 수업 모습" width="3208" height="2268" decoding="async" />
+            <img src="image/sunnycoding_back01.jpg" alt="써니코딩컴퓨터 코딩 수업 모습 1" loading="eager" decoding="async" />
+            <img src="image/sunnycoding_back02.jpg" alt="써니코딩컴퓨터 코딩 수업 모습 2" loading="eager" decoding="async" />
+            <img src="image/sunnycoding_back03.jpg" alt="써니코딩컴퓨터 코딩 수업 모습 3" loading="eager" decoding="async" />
+            <img src="image/KakaoTalk_20251211_194519641.jpg" alt="써니코딩컴퓨터 학생 프로젝트 활동 모습" loading="eager" decoding="async" />
           </div>
-          <div class="hero-badge">
+          <div class="hero-caption">
             <b>1:1 로드맵</b>
             <span>진단부터 프로젝트 완성까지 학생별 맞춤 지도</span>
           </div>
@@ -351,10 +375,10 @@
 
     <section class="stats-wrap" aria-label="써니코딩 주요 성과">
       <div class="container stats">
-        <div class="stat"><strong>2020년</strong><span>써니코딩 개원</span></div>
-        <div class="stat"><strong>6년 이상</strong><span>SW영재원 연속 합격</span></div>
+        <div class="stat"><strong>6년 연속</strong><span>SW영재원 합격</span></div>
         <div class="stat"><strong>95% 이상</strong><span>SW영재원 합격률</span></div>
-        <div class="stat"><strong>1:1</strong><span>개인 로드맵·피드백</span></div>
+        <div class="stat"><strong>4년 연속</strong><span>선린인터넷고 합격</span></div>
+        <div class="stat"><strong>90%</strong><span>선린인터넷고 합격률</span></div>
       </div>
       <p class="stats-note">※ 학원 자체 집계 기준이며 연도와 지원 조건에 따라 결과는 달라질 수 있습니다.</p>
     </section>
@@ -391,8 +415,8 @@
 
           <a class="focus-card" href="admission.html">
             <div class="focus-icon" aria-hidden="true">04</div>
-            <h3>선린인터넷고 진학반</h3>
-            <p>선린인터넷고등학교 진학을 위한 코딩 실력, 프로젝트 포트폴리오와 면접을 준비합니다.</p>
+            <h3>특성화고 진학반</h3>
+            <p>IT·SW 특성화고 진학을 위한 코딩 실력, 프로젝트 포트폴리오와 면접을 준비합니다.</p>
             <span class="card-link">진학 과정 알아보기 <span aria-hidden="true">→</span></span>
           </a>
         </div>
@@ -403,13 +427,14 @@
       <div class="container reason-grid">
         <div class="principal">
           <img src="{{$template}}/img/main/sunnycoding_sunny.jpg" alt="써니코딩컴퓨터 정선 원장" width="150" height="180" loading="lazy" />
-          <div class="principal-mark">교육학 × 컴퓨터공학<br />개발 실무 × 코딩교육</div>
+          <div class="principal-mark">교육학 × 컴퓨터공학<br />코딩 기본기 × AI 활용</div>
         </div>
 
         <div class="reason-copy">
           <p class="eyebrow">WHY SUNNYCODING</p>
-          <h2>외우는 코딩보다<br />생각을 설명하는 힘</h2>
-          <p>교육학과 컴퓨터공학을 전공한 원장이 개발 실무와 코딩교육 경험을 연결해, 학생이 자신의 생각을 결과물로 완성하도록 직접 지도합니다.</p>
+          <h2>AI가 코딩을 잘할수록<br />기본기가 더 중요합니다</h2>
+          <p>AI는 놀라울 만큼 빠르게 코드를 만들지만, 데이터가 맞는지, 논리가 정확한지, 결과가 효율적인지는 사람이 확인해야 합니다. 교육학·컴퓨터공학을 전공한 원장이 아이가 AI의 결과를 그대로 믿지 않고 판단하고 검증할 수 있는 코딩 기본기를 직접 지도합니다.</p>
+          <p>원장이 직접 AI와 데이터 프로젝트를 개발하며 확인한 결론은 분명했습니다. 겉으로 완벽해 보이는 결과물도 코딩 지식 없이 내부의 오류를 찾아내기 어려웠고, 프로젝트가 커질수록 사람의 명확한 지시와 검증 능력이 더 중요했습니다. 그래서 써니코딩은 바이브 코딩을 서두르기보다 아이가 먼저 읽고, 생각하고, 직접 해결하는 힘을 기릅니다.</p>
 
           <div class="reason-list">
             <div class="reason-item"><b>원장 직접 설계</b><span>학생의 수준과 목표를 진단해 개별 커리큘럼을 설계합니다.</span></div>
@@ -419,6 +444,26 @@
           </div>
 
           <a class="btn btn-dark" href="#contact">교육 상담하기</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ai-education">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">AI EDUCATION PRINCIPLES</p>
+          <h2>AI가 코딩하는 시대,<br />코딩을 아는 아이가 앞서갑니다</h2>
+          <p>AI에게 명확하게 지시하고, 결과를 검증하고, 잘못된 부분을 바로잡으려면 아이가 먼저 코딩의 원리와 문제 해결 과정을 배워야 합니다.</p>
+        </div>
+        <div class="ai-principles">
+          <article class="ai-principle"><b>겉모양보다 안쪽의 논리</b><p>AI가 만든 프로그램은 완벽해 보여도 데이터 누락, 잘못된 연결과 가짜 값처럼 눈에 잘 보이지 않는 오류가 남을 수 있습니다.</p></article>
+          <article class="ai-principle"><b>정확한 결과는 정확한 지시에서</b><p>프로젝트가 커질수록 무엇을 만들지, 어떤 데이터를 사용할지, 결과를 어떻게 검증할지 구체적으로 지시하는 힘이 중요합니다.</p></article>
+          <article class="ai-principle"><b>AI보다 먼저 생각하는 습관</b><p>어린 시기에 AI가 답을 대신하면 스스로 읽고 고민하고 시행착오를 겪는 학습 과정이 줄어들 수 있어 활용 시기를 구분합니다.</p></article>
+        </div>
+        <div class="age-roadmap" aria-label="학년별 AI 코딩 교육 원칙">
+          <div class="age-step"><strong>초등 3~4학년</strong><span>독서·문해력과 코딩 기본기로 생각하는 습관을 먼저 기릅니다.</span></div>
+          <div class="age-step"><strong>초등 5~6학년</strong><span>코딩과 데이터 가공의 기본 원리를 배우고 AI 활용의 토대를 만듭니다.</span></div>
+          <div class="age-step"><strong>중등 이후</strong><span>충분한 기본기를 바탕으로 AI를 활용하고 결과를 검증하는 프로젝트로 확장합니다.</span></div>
         </div>
       </div>
     </section>
