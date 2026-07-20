@@ -1,634 +1,585 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<html lang="ko">
 <head>
-  <!-- 호스팅 서비스 문자 처리 규격: 변경하지 않음 -->
-  <meta charset="ko" />
+  <meta charset="UTF-8" />
+  <title>써니코딩 홈페이지</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <meta name="google-site-verification" content="9sgEpiPf8zoC29b7qcjeSk4YLocLkE-QO32EtdjVN44" />
-
-  <title>은평구 코딩학원·컴퓨터학원 | 써니코딩컴퓨터</title>
-  <meta name="description" content="서울 은평구 초·중·고 코딩 전문교육. 기초 코딩부터 파이썬·AI 프로젝트, 정보 수행평가·세특, SW영재원, 선린인터넷고 진학까지 학생별 1:1 로드맵으로 지도합니다." />
-  <meta name="keywords" content="은평구 코딩학원,은평구 컴퓨터학원,은평구 초등 코딩학원,정보 수행평가,정보 세특,SW영재원,선린인터넷고" />
-
-  <link rel="canonical" href="https://www.sunnycoding.co.kr/" />
-  <link rel="alternate" hreflang="ko" href="https://www.sunnycoding.co.kr/" />
-  <link rel="alternate" hreflang="x-default" href="https://www.sunnycoding.co.kr/" />
-  <link rel="icon" type="image/png" sizes="48x48" href="image/sunnycoding_favicon-48x48.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="image/sunnycoding_favicon-32x32.png" />
-  <link rel="apple-touch-icon" href="image/sunnycoding_apple-touch-icon.png" />
-
-  <meta property="og:locale" content="ko_KR" />
+  <!-- SEO / Open Graph -->
+  <meta name="description" content="은평구 초·중·고 1:1 코딩학원 — AI·파이썬·프로젝트 기반, 영재원/선린까지 한 흐름으로." />
+  <meta property="og:title" content="써니코딩 홈페이지" />
+  <meta property="og:description" content="아이의 속도와 과정을 존중하는 1:1 맞춤 코딩" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="써니코딩컴퓨터" />
-  <meta property="og:title" content="은평구 코딩학원·컴퓨터학원 | 써니코딩컴퓨터" />
-  <meta property="og:description" content="아이의 생각을 프로젝트로 완성하는 초·중·고 코딩 전문교육. 수행평가·세특, SW영재원, IT 진학까지 연결합니다." />
-  <meta property="og:image" content="https://www.sunnycoding.co.kr/image/sunnycoding_back01.jpg" />
-  <meta property="og:image:alt" content="써니코딩컴퓨터 코딩 수업 모습" />
-  <meta property="og:url" content="https://www.sunnycoding.co.kr/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="은평구 코딩학원·컴퓨터학원 | 써니코딩컴퓨터" />
-  <meta name="twitter:description" content="초·중·고 코딩 기본기부터 프로젝트, 수행평가·세특, SW영재원과 IT 진학까지 연결합니다." />
-  <meta name="twitter:image" content="https://www.sunnycoding.co.kr/image/sunnycoding_back01.jpg" />
+  <meta property="og:image" content="https://example.com/og-image.jpg" />
+  <meta property="og:url" content="https://example.com" />
 
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"WebSite",
-        "@id":"https://www.sunnycoding.co.kr/#website",
-        "name":"써니코딩컴퓨터",
-        "url":"https://www.sunnycoding.co.kr/",
-        "inLanguage":"ko-KR"
-      },
-      {
-        "@type":["EducationalOrganization","LocalBusiness"],
-        "@id":"https://www.sunnycoding.co.kr/#localbusiness",
-        "name":"써니코딩컴퓨터학원",
-        "url":"https://www.sunnycoding.co.kr/",
-        "telephone":"02-6396-5002",
-        "email":"sunnycoding@naver.com",
-        "image":"https://www.sunnycoding.co.kr/image/sunnycoding_back01.jpg",
-        "priceRange":"₩₩",
-        "address":{
-          "@type":"PostalAddress",
-          "streetAddress":"연서로 158, 3층",
-          "addressLocality":"은평구",
-          "addressRegion":"서울특별시",
-          "postalCode":"03388",
-          "addressCountry":"KR"
-        },
-        "geo":{
-          "@type":"GeoCoordinates",
-          "latitude":37.6129325,
-          "longitude":126.9178271
-        },
-        "sameAs":[
-          "https://blog.naver.com/sunnycoding",
-          "https://www.instagram.com/sunnycoding/",
-          "https://www.youtube.com/channel/UCCWvW8VdsLYiAjtMmjvW1hA"
-        ]
-      }
-    ]
-  }
-  </script>
-
+  <!-- W3CSS + Fonts + Icons -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="shortcut icon" href="icon3.ico" />
   <style>
     :root {
-      --navy:#212958;
-      --navy-dark:#151b3f;
-      --yellow:#ffe600;
-      --yellow-soft:#fff9cf;
-      --bg:#f7f8fc;
-      --white:#fff;
-      --text:#202335;
-      --muted:#687087;
-      --line:#e5e7ef;
-      --shadow:0 18px 48px rgba(25,32,74,.09);
-      --radius:22px;
-      --max:1100px;
+      --brand-yellow: #FFE600;
+      --brand-navy: #212958;
+      --brand-navy-dark: #1a214a;
     }
+    body, h1, h2, h3, h4, h5, h6 { font-family: "Lato", sans-serif; }
+    body, html { height: 100%; color: var(--brand-navy); line-height: 1.8; }
 
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body {
-      margin:0;
-      color:var(--text);
-      background:var(--white);
-      font-family:"Pretendard","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",Arial,sans-serif;
-      line-height:1.7;
-      word-break:keep-all;
+    /* Top bar (brand) */
+    .w3-top #myNavbar { background: var(--brand-navy); color: #fff; }
+    .w3-top #myNavbar .w3-button { color: #fff !important; }
+    .w3-top #myNavbar .w3-button:hover,
+    .w3-top #myNavbar .w3-hover-black:hover { background: rgba(255, 230, 0, 0.15) !important; color: #fff !important; }
+    .w3-top #myNavbar .w3-right.w3-hover-red:hover { background: rgba(255, 230, 0, 0.15) !important; }
+
+    /* Parallax sections */
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+      position: relative;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
-    img { max-width:100%; display:block; }
-    a { color:inherit; text-decoration:none; }
-    button { font:inherit; }
-    .container { width:min(calc(100% - 40px),var(--max)); margin:0 auto; }
-    .skip-link { position:absolute; left:-9999px; top:8px; z-index:9999; }
-    .skip-link:focus { left:8px; padding:10px 14px; background:#fff; border:2px solid var(--navy); border-radius:10px; }
+    .bgimg-1 { min-height: 700px; }
+    .bgimg-2 { background-image: url('./image/sunnycoding_back01.jpg'); min-height: 300px; }
+    .bgimg-3 { background-image: url('./image/sunnycoding_back02.jpg'); min-height: 300px; }
+    .bgimg-4 { background-image: url('./image/sunnycoding_back03.jpg'); min-height: 300px; }
 
-    .site-header {
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:rgba(255,255,255,.94);
-      border-bottom:1px solid rgba(229,231,239,.9);
-      backdrop-filter:blur(14px);
-    }
-    .nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
-    .logo { display:flex; align-items:center; flex:0 0 auto; }
-    .logo img { width:180px; height:auto; }
-    .nav-links { display:flex; align-items:center; gap:26px; font-size:15px; font-weight:700; }
-    .nav-links a:not(.btn):hover { color:#4b57a0; }
-    .nav-toggle { display:none; width:44px; height:44px; border:0; border-radius:12px; background:var(--bg); color:var(--navy); cursor:pointer; font-size:22px; }
+    .w3-wide { letter-spacing: 10px; }
+    .w3-hover-opacity { cursor: pointer; }
+    .w3-padding-large { width: 150px; }
 
-    .btn {
-      min-height:48px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      padding:11px 20px;
-      border:1px solid transparent;
-      border-radius:999px;
-      font-weight:800;
-      transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
-    }
-    .btn:hover { transform:translateY(-2px); }
-    .btn-primary { background:var(--yellow); color:var(--navy-dark); box-shadow:0 10px 24px rgba(255,230,0,.24); }
-    .btn-secondary { background:#fff; color:var(--navy); border-color:var(--navy); }
-    .btn-dark { background:var(--navy); color:#fff; }
-    .btn-small { min-height:42px; padding:8px 17px; }
+    /* Brand accents */
+    .brand-pill { background: var(--brand-yellow); color: var(--brand-navy); padding: 8px 14px; border-radius: 12px; font-weight: 700; }
+    .brand-btn { background: var(--brand-yellow) !important; color: var(--brand-navy) !important; border-radius: 9999px; font-weight: 700; }
+    .brand-btn-outline { background: #fff !important; color: var(--brand-navy) !important; border: 2px solid var(--brand-navy) !important; border-radius: 9999px; font-weight: 700; }
+    .brand-btn-outline:hover { background: var(--brand-yellow) !important; color: var(--brand-navy) !important; }
+    .brand-chip { display:inline-block; background: rgba(255,230,0,.18); border: 1px solid var(--brand-yellow); color: var(--brand-navy); padding: 4px 10px; border-radius: 999px; font-size: 12px; }
+    .brand-stat { text-align:center; }
+    .brand-stat .num { font-size: 28px; font-weight: 800; color: var(--brand-navy); }
+    .brand-stat .cap { font-size: 12px; color: #4b527d; }
 
-    .hero { position:relative; overflow:hidden; padding:62px 0 60px; background:linear-gradient(135deg,#fff 0%,#fffdf0 52%,#f4f5fb 100%); }
-    .hero .container { width:min(calc(100% - 40px),1240px); }
-    .hero:before,.hero:after { content:""; position:absolute; border-radius:50%; pointer-events:none; }
-    .hero:before { width:420px; height:420px; top:-240px; right:-80px; background:rgba(255,230,0,.28); }
-    .hero:after { width:280px; height:280px; bottom:-190px; left:-90px; border:54px solid rgba(33,41,88,.05); }
-    .hero-grid { position:relative; display:grid; grid-template-columns:.9fr 1.1fr; align-items:center; gap:34px; }
-    .eyebrow { margin:0 0 14px; color:#525d9e; font-size:14px; font-weight:900; letter-spacing:.08em; }
-    .hero h1 { margin:0; color:var(--navy-dark); font-size:clamp(38px,4.6vw,56px); line-height:1.16; letter-spacing:-.04em; }
-    .hero h1 strong { position:relative; color:var(--navy); }
-    .hero h1 strong:after { content:""; position:absolute; left:0; right:0; bottom:3px; height:12px; background:var(--yellow); z-index:-1; border-radius:9px; }
-    .achievement-title { display:grid; gap:13px; font-size:clamp(28px,3.3vw,39px) !important; }
-    .achievement-title > span { display:block; }
-    .achievement-title em { display:inline-block; margin-left:8px; padding:5px 10px; border-radius:9px; background:var(--navy); color:var(--yellow); font-size:.43em; font-style:normal; letter-spacing:-.02em; vertical-align:middle; }
-    .hero-copy { max-width:590px; margin:18px 0 0; color:#4f566d; font-size:16px; }
-    .hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:32px; }
-    .hero-note { margin-top:18px; color:var(--muted); font-size:13px; }
-    .hero-visual { position:relative; width:100%; max-width:550px; margin-bottom:32px; justify-self:end; }
-    .hero-photo { display:grid; grid-template-columns:1fr 1fr; gap:7px; padding:7px; border-radius:26px; overflow:hidden; box-shadow:var(--shadow); background:#fff; }
-    .hero-photo img { width:100%; height:205px; object-fit:cover; }
-    .hero-photo img:nth-child(1) { border-radius:19px 5px 5px 5px; }
-    .hero-photo img:nth-child(2) { border-radius:5px 19px 5px 5px; }
-    .hero-photo img:nth-child(3) { border-radius:5px 5px 5px 19px; }
-    .hero-photo img:nth-child(4) { border-radius:5px 5px 19px 5px; }
-    .hero-caption { position:absolute; left:18px; bottom:-30px; width:175px; padding:14px 16px; border:1px solid rgba(255,255,255,.9); border-radius:16px; background:#fff; color:var(--text); box-shadow:0 14px 32px rgba(21,27,63,.14); }
-    .hero-caption b { display:block; color:var(--navy); font-size:19px; }
-    .hero-caption span { display:block; margin-top:2px; color:var(--muted); font-size:12px; line-height:1.5; }
+    .w3-deep-purple { background: var(--brand-navy) !important; }
+    .w3-light-green { background: #f7f7fb !important; border: 1px solid #e8e9f3; }
 
-    .stats-wrap { position:relative; margin-top:-1px; background:var(--navy); color:#fff; }
-    .stats { display:grid; grid-template-columns:repeat(4,1fr); }
-    .stat { padding:23px 20px; text-align:center; border-right:1px solid rgba(255,255,255,.12); }
-    .stat:last-child { border-right:0; }
-    .stat strong { display:block; color:var(--yellow); font-size:clamp(23px,2.7vw,31px); line-height:1.2; }
-    .stat span { display:block; margin-top:6px; color:rgba(255,255,255,.78); font-size:13px; }
-    .stats-note { margin:0; padding:0 20px 20px; text-align:center; color:rgba(255,255,255,.58); font-size:11px; }
+    .eyebrow{letter-spacing:.12em;text-transform:uppercase;font-size:12px;color:#6b7280;margin-bottom:6px}
 
-    .section { padding:78px 0; }
-    .section-soft { background:var(--bg); }
-    .section-head { max-width:720px; margin:0 auto 34px; text-align:center; }
-    .section-head .eyebrow { margin-bottom:8px; }
-    .section-head h2 { margin:0; color:var(--navy-dark); font-size:clamp(29px,3.5vw,40px); line-height:1.28; letter-spacing:-.035em; }
-    .section-head p { margin:16px auto 0; color:var(--muted); font-size:17px; }
+    /* VALUES (About) */
+    .value-cards{display:grid;gap:16px;grid-template-columns:1fr}
+    .value-card{border:1px solid #ececf5;background:#fff;border-radius:16px;padding:18px 18px 16px;box-shadow:0 1px 0 rgba(16,24,40,.02)}
+    .value-icon{width:48px;height:48px;border-radius:14px;background:#111827;color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+    .principal-card{border:1px solid #e6e7ef;background:#fff;border-radius:16px;padding:18px;}
+    .badge{display:inline-flex;align-items:center;gap:6px;border:1px solid #ececf5;border-radius:999px;padding:6px 10px;font-size:12px;background:#f6f7fb}
+    @media(min-width:992px){.value-cards{grid-template-columns:1fr 1fr 1fr 1fr}}
 
-    .focus-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
-    .focus-card { position:relative; min-height:260px; display:flex; flex-direction:column; padding:24px 21px; overflow:hidden; border:1px solid var(--line); border-radius:var(--radius); background:#fff; transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease; }
-    .focus-card:hover { transform:translateY(-5px); border-color:#e9d300; box-shadow:var(--shadow); }
-    .focus-icon { width:46px; height:46px; display:grid; place-items:center; margin-bottom:20px; border-radius:14px; background:var(--yellow-soft); color:var(--navy); font-size:20px; font-weight:900; }
-    .focus-card h3 { margin:0 0 8px; color:var(--navy-dark); font-size:20px; }
-    .focus-card p { margin:0; color:var(--muted); font-size:14px; }
-    .card-link { display:inline-flex; align-items:center; gap:6px; margin-top:auto; padding-top:22px; color:var(--navy); font-weight:900; font-size:14px; }
-    .focus-card:hover .card-link { gap:11px; }
+    /* 원장 소개 영역 */
+    .principal-inner{ display:flex; align-items:flex-start; gap:16px; flex-wrap:wrap; }
+    .principal-photo{ width:150px; height:180px; border-radius:24px; object-fit:cover; display:block; flex-shrink:0; }
+    .principal-text{ flex:1 1 200px; min-width:0; }
 
-    .reason-grid { display:grid; grid-template-columns:.68fr 1.32fr; align-items:center; gap:60px; }
-    .principal { position:relative; width:240px; max-width:100%; margin:auto; }
-    .principal img { width:240px; max-width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:24px; box-shadow:var(--shadow); }
-    .principal-mark { width:100%; margin-top:14px; padding:14px 16px; border-radius:16px; background:var(--yellow); color:var(--navy-dark); font-size:14px; font-weight:900; line-height:1.45; text-align:center; box-shadow:0 14px 32px rgba(33,41,88,.15); }
-    .reason-copy h2 { margin:0; color:var(--navy-dark); font-size:clamp(30px,3.7vw,42px); line-height:1.28; letter-spacing:-.035em; }
-    .reason-copy > p { color:var(--muted); font-size:17px; }
-    .reason-list { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:28px; }
-    .reason-item { padding:18px; border:1px solid var(--line); border-radius:16px; background:#fff; }
-    .reason-item b { display:block; margin-bottom:4px; color:var(--navy); }
-    .reason-item span { color:var(--muted); font-size:13px; }
-    .reason-copy .btn { margin-top:28px; }
-    .ai-principles { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:34px; }
-    .ai-principle { padding:24px; border:1px solid var(--line); border-radius:var(--radius); background:#fff; }
-    .ai-principle b { display:block; margin-bottom:8px; color:var(--navy-dark); font-size:19px; }
-    .ai-principle p { margin:0; color:var(--muted); font-size:14px; }
-    .age-roadmap { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:20px; }
-    .age-step { padding:18px; border-radius:16px; background:var(--navy); color:#fff; }
-    .age-step strong { display:block; color:var(--yellow); font-size:17px; }
-    .age-step span { display:block; margin-top:5px; color:rgba(255,255,255,.76); font-size:13px; }
+    /* Curriculum styles */
+    .curriculum-grid { display:grid; grid-template-columns:1fr; gap:24px; }
+    .curriculum-box { border:1px solid #e6e7ef; border-radius:16px; padding:18px; background:#fff; }
+    .curriculum-head { display:flex; align-items:center; gap:10px; font-weight:900; margin:2px 0 14px; font-size:22px; color:var(--brand-navy); }
+    .curriculum-head .head-icon{ width:36px; height:36px; border-radius:10px; background:#f6f7fb; display:flex; align-items:center; justify-content:center; color:#111827; }
+    .curriculum-sub { margin:-2px 0 12px; }
+    .callout{border:1.5px solid var(--brand-yellow); background: rgba(255,230,0,.10); border-radius:14px; padding:12px 14px; font-weight:800; color: var(--brand-navy); display:flex; align-items:flex-start; gap:10px; font-size:16px}
+    .callout .fa{color:var(--brand-navy-dark); margin-top:3px}
+    .track-cards { display:grid; grid-template-columns:1fr; gap:12px; }
+    .track-card { border:1px solid #ececf5; border-radius:14px; padding:12px 14px; background:#fff; }
+    .track-title { font-weight:800; margin:0 0 6px; font-size:16px; color:#111827; }
+    .track-list { margin:0; padding-left:18px; }
+    @media (min-width: 992px){ .curriculum-grid{ grid-template-columns:1fr 1fr; } .curriculum-head{ font-size:26px; } .callout{ font-size:17px; } }
 
-    .roadmap { display:grid; grid-template-columns:repeat(4,1fr); position:relative; gap:16px; }
-    .roadmap:before { content:""; position:absolute; top:31px; left:10%; right:10%; height:2px; background:#dfe2ee; }
-    .road-step { position:relative; padding-top:68px; text-align:center; }
-    .step-num { position:absolute; z-index:2; top:0; left:50%; width:64px; height:64px; display:grid; place-items:center; transform:translateX(-50%); border:8px solid var(--bg); border-radius:50%; background:var(--navy); color:var(--yellow); font-weight:900; }
-    .road-step h3 { margin:15px 0 8px; color:var(--navy-dark); }
-    .road-step p { margin:0; color:var(--muted); font-size:14px; }
-    .center-action { margin-top:38px; text-align:center; }
+    .personal-roadmap{ border:1px solid #e6e7ef; background:#fff; border-radius:16px; padding:18px 20px; box-shadow:0 1px 0 rgba(16,24,40,.02); }
+    .personal-roadmap h4{ margin:0 0 6px; font-weight:800; color:#111827; display:flex; align-items:center; gap:8px; }
+    .personal-roadmap p{ margin:0; color:#4b5563; }
+    .personal-roadmap .actions{ display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; margin-top:12px; }
 
-    .project-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
-    .project-card { overflow:hidden; border:1px solid var(--line); border-radius:var(--radius); background:#fff; transition:transform .2s ease,box-shadow .2s ease; }
-    .project-card:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
-    .project-card img { width:100%; height:165px; object-fit:cover; }
-    .project-body { padding:17px 18px 18px; }
-    .tags { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:9px; }
-    .tag { padding:4px 9px; border-radius:999px; background:var(--yellow-soft); color:var(--navy); font-size:11px; font-weight:800; }
-    .project-body h3 { margin:0 0 6px; color:var(--navy-dark); font-size:18px; }
-    .project-body p { margin:0; color:var(--muted); font-size:13px; line-height:1.6; }
-    .project-body .card-link { padding-top:14px; }
+    .admission-cards{ display:grid; gap:16px; grid-template-columns:1fr; }
+    .admission-card{ border:1px solid #e6e7ef; background:#fff; border-radius:16px; padding:16px 18px; display:flex; align-items:center; gap:10px; }
+    .admission-card .icon{ width:34px; height:34px; border-radius:10px; background:#f6f7fb; display:flex; align-items:center; justify-content:center; }
+    .admission-grid{ display:grid; gap:20px; grid-template-columns:1fr; }
+    .faq-card{ border:1px solid #ececf5; border-radius:16px; background:#fff; padding:16px 18px; }
+    .stats-panel{ border:1px solid #e6e7ef; border-radius:16px; background:#fff; padding:20px 22px; }
+    .stat-wrap{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:8px; }
+    .stat-large{ font-size:34px; font-weight:800; color:#111827; }
+    .stat-cap{ font-size:12px; color:#6b7280; margin-top:2px; }
+    @media (min-width: 992px){ .admission-cards{ grid-template-columns:1fr 1fr 1fr; } .admission-grid{ grid-template-columns:1fr 1fr; } }
 
-    .results-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
-    .result-panel { padding:30px; border:1px solid var(--line); border-radius:var(--radius); background:#fff; }
-    .result-panel h3 { margin:0 0 18px; color:var(--navy-dark); font-size:24px; }
-    .result-list { margin:0; padding:0; list-style:none; }
-    .result-list li { display:flex; gap:14px; padding:13px 0; border-bottom:1px solid var(--line); }
-    .result-list li:last-child { border-bottom:0; }
-    .result-list b { flex:0 0 62px; color:var(--navy); }
-    .result-list span { color:#4f566d; }
-    .quote { margin:0; color:var(--navy-dark); font-size:19px; font-weight:750; line-height:1.75; }
-    .quote-meta { margin-top:18px; color:var(--muted); font-size:13px; }
-    .quote + .quote { margin-top:24px; padding-top:24px; border-top:1px solid var(--line); }
+    .testimonial-cards{ display:grid; grid-template-columns:1fr; gap:18px; }
+    .testimonial-card{ border:1px solid #ececf5; background:#fff; border-radius:16px; padding:20px; box-shadow:0 1px 0 rgba(16,24,40,.02); }
+    @media (min-width: 992px){ .testimonial-cards{ grid-template-columns:1fr 1fr 1fr; } }
 
-    .contact-cta { padding:82px 0; background:var(--navy); color:#fff; }
-    .cta-inner { display:flex; align-items:center; justify-content:space-between; gap:40px; }
-    .cta-inner h2 { margin:0; font-size:clamp(30px,4vw,46px); line-height:1.25; }
-    .cta-inner p { margin:12px 0 0; color:rgba(255,255,255,.72); }
-    .cta-actions { display:flex; flex-wrap:wrap; gap:10px; flex:0 0 auto; }
+    .blog-cards{display:grid;gap:18px;grid-template-columns:1fr}
+    .blog-card{border:1px solid #e6e7ef;border-radius:16px;background:#fff;padding:18px;box-shadow:0 1px 0 rgba(16,24,40,.02)}
+    .blog-meta{font-size:12px;color:#6b7280}
+    .blog-title{margin:8px 0;font-weight:700}
+    .blog-desc{font-size:13px;color:#374151}
+    .blog-btn{display:inline-flex;align-items:center;gap:8px;border:1px solid #e5e7eb;padding:10px 14px;border-radius:999px;margin-top:8px;background:#fff}
+    @media(min-width:992px){.blog-cards{grid-template-columns:1fr 1fr 1fr}}
 
-    .footer { padding:52px 0 28px; background:var(--navy-dark); color:#fff; }
-    .footer-grid { display:grid; grid-template-columns:1.35fr .75fr 1fr; gap:58px; }
-    .footer-logo { width:250px; filter:brightness(0) invert(1); }
-    .footer p,.footer li,.footer a { color:rgba(255,255,255,.7); font-size:14px; }
-    .footer h3 { margin:0 0 13px; font-size:15px; }
-    .footer ul { margin:0; padding:0; list-style:none; }
-    .footer li + li { margin-top:8px; }
-    .footer a:hover { color:var(--yellow); }
-    .copyright { margin-top:34px; padding-top:22px; border-top:1px solid rgba(255,255,255,.1); color:rgba(255,255,255,.45); font-size:12px; }
+    .footer { background: var(--brand-navy); color: #fff; }
+    .footer-grid { display: grid; gap: 24px; grid-template-columns: 1fr; align-items: start; }
+    .footer h5 { margin: 0 0 12px; font-size: 16px; font-weight: 700; }
+    .footer p, .footer a, .footer li, .footer small { font-size: 14px; line-height: 1.7; }
+    .footer a { color: #e8eaf6; text-decoration: none; }
+    .footer a:hover { color: var(--brand-yellow); }
+    .footer-list { margin: 0; padding: 0; list-style: none; }
+    .footer-list li + li { margin-top: 8px; }
+    .sc-badge { width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 12px; background: #fff; color: var(--brand-navy); font-weight: 800; margin-right: 8px; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.12); margin-top: 20px; padding-top: 14px; font-size: 12px; color: rgba(255,255,255,.8); }
+    .footer-icons .fa { width: 18px; text-align: center; opacity: .95; }
+    @media (min-width: 992px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
 
-    @media (max-width:1020px) {
-      .nav-links { gap:16px; font-size:13px; }
-      .logo img { width:165px; }
-      .hero-grid { gap:40px; }
-      .focus-grid { grid-template-columns:1fr 1fr; }
-      .reason-grid { gap:45px; }
-    }
+    .footer-logo { max-width: 500px; width: 100%; height: auto; display: block; }
 
-    @media (max-width:820px) {
-      .container { width:min(calc(100% - 30px),var(--max)); }
-      .hero .container { width:min(calc(100% - 30px),var(--max)); }
-      .nav-toggle { display:block; }
-      .nav-links { position:absolute; top:72px; left:0; right:0; display:none; padding:16px 20px 22px; flex-direction:column; align-items:stretch; gap:4px; background:#fff; border-bottom:1px solid var(--line); box-shadow:0 16px 30px rgba(21,27,63,.08); }
-      .nav-links.open { display:flex; }
-      .nav-links a { padding:11px 8px; }
-      .nav-links .btn { margin-top:7px; }
-      .hero { padding:50px 0 56px; }
-      .hero-grid { grid-template-columns:1fr; }
-      .hero-visual { max-width:420px; justify-self:start; }
-      .stats { grid-template-columns:1fr 1fr; }
-      .stat:nth-child(2) { border-right:0; }
-      .stat:nth-child(-n+2) { border-bottom:1px solid rgba(255,255,255,.12); }
-      .section { padding:64px 0; }
-      .reason-grid { grid-template-columns:1fr; }
-      .ai-principles,.age-roadmap { grid-template-columns:1fr; }
-      .principal { width:220px; }
-      .project-grid { grid-template-columns:1fr 1fr; }
-      .cta-inner { align-items:flex-start; flex-direction:column; }
-      .footer-grid { grid-template-columns:1fr 1fr; }
-      .footer-grid > div:first-child { grid-column:1/-1; }
-    }
+    @media only screen and (max-device-width: 1024px) { .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 { background-attachment: scroll; } }
 
-    @media (max-width:600px) {
-      body { word-break:normal; }
-      .logo img { width:160px; }
-      .hero h1 { font-size:36px; }
-      .achievement-title { font-size:27px !important; gap:16px; }
-      .achievement-title em { display:table; margin:7px 0 0; font-size:15px; }
-      .hero-copy { font-size:16px; }
-      .hero-actions .btn { width:100%; }
-      .hero-photo img { height:auto; aspect-ratio:4/3; }
-      .stat { padding:22px 10px; }
-      .stat strong { font-size:25px; }
-      .focus-grid,.project-grid,.results-grid { grid-template-columns:1fr; }
-      .focus-card { min-height:230px; }
-      .reason-list { grid-template-columns:1fr; }
-      .principal-mark { right:10px; bottom:10px; }
-      .roadmap { grid-template-columns:1fr; gap:4px; }
-      .roadmap:before { top:28px; bottom:28px; left:27px; right:auto; width:2px; height:auto; }
-      .road-step { min-height:100px; padding:3px 0 20px 82px; text-align:left; }
-      .step-num { top:0; left:0; transform:none; border-width:6px; }
-      .road-step h3 { margin:4px 0; }
-      .project-card img { height:180px; }
-      .cta-actions,.cta-actions .btn { width:100%; }
-      .footer-grid { grid-template-columns:1fr; gap:32px; }
-      .footer-grid > div:first-child { grid-column:auto; }
-    }
+    .hero-title-img{ display:block; width: min(1700px, 100vw); height:auto; border-radius:12px; box-shadow:none; opacity:1 !important; filter:none; image-rendering:-webkit-optimize-contrast; image-rendering:crisp-edges; -ms-interpolation-mode:bicubic; backface-visibility:hidden; transform:translateZ(0); }
 
-    @media (prefers-reduced-motion:reduce) {
-      html { scroll-behavior:auto; }
-      *,*:before,*:after { transition:none!important; }
-    }
+    /* ===== 인터뷰 섹션 전용 스타일 ===== */
+    .interview-wrap{ display:grid; grid-template-columns:1fr; gap:18px; }
+    .interview-title{ margin:0; font-weight:900; color:#111827; }
+    .interview-lead{ color:#4b5563; margin:0 0 8px; }
+    .qa-list{ display:grid; gap:12px; }
+    details.qa{ border:1px solid #e6e7ef; background:#fff; border-radius:16px; padding:14px 16px; }
+    details.qa[open]{ box-shadow:0 6px 16px rgba(17,24,39,.06); border-color:#e0e2ee; }
+    summary.q{ list-style:none; cursor:pointer; font-weight:800; color:#111827; display:flex; align-items:center; gap:10px; }
+    summary.q::-webkit-details-marker{ display:none; }
+    .q-icon{ width:28px; height:28px; border-radius:8px; background:#f6f7fb; display:flex; align-items:center; justify-content:center; }
+    .a{ margin-top:10px; color:#374151; font-size:15px; }
+    .interview-meta{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+    .interview-meta .badge{ background:#fff8c2; border-color:#ffe600; }
+    .interview-aside{ border:1px solid #ececf5; background:#fff; border-radius:16px; padding:16px; }
+    .interview-aside img{ width:100%; border-radius:12px; }
+    @media(min-width: 992px){ .interview-wrap{ grid-template-columns: minmax(0,1.4fr) minmax(0,1fr); } }
   </style>
 </head>
-
 <body>
-  <a class="skip-link" href="#main">본문 바로가기</a>
 
-  <header class="site-header">
-    <div class="container nav">
-      <a class="logo" href="#home" aria-label="써니코딩컴퓨터 홈">
-        <img src="image/sunnycoding_logo.png" alt="써니코딩컴퓨터학원" width="1096" height="232" />
-      </a>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="메뉴 열기">
+      <i class="fa fa-bars" aria-hidden="true"></i><span class="w3-hide">메뉴</span>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user" aria-hidden="true"></i> 학원소개</a>
+    <a href="#link" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th" aria-hidden="true"></i> 커리큘럼·프로젝트</a>
+    <a href="#testimonials" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-star" aria-hidden="true"></i> 후기</a>
+    <a href="#blog" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-newspaper-o" aria-hidden="true"></i> 소식</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope" aria-hidden="true"></i> 상담·오시는길</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red" aria-label="검색"><i class="fa fa-search" aria-hidden="true"></i></a>
+  </div>
 
-      <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mainMenu">☰</button>
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">학원소개</a>
+    <a href="#link" class="w3-bar-item w3-button" onclick="toggleFunction()">커리큘럼·프로젝트</a>
+    <a href="#testimonials" class="w3-bar-item w3-button" onclick="toggleFunction()">후기</a>
+    <a href="#blog" class="w3-bar-item w3-button" onclick="toggleFunction()">소식</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">상담·오시는길</a>
+    <a href="#" class="w3-bar-item w3-button">검색</a>
+  </div>
+</div>
 
-      <nav class="nav-links" id="mainMenu" aria-label="주요 메뉴">
-        <a href="curriculum.html">교육과정</a>
-        <a href="school-record.html">수행평가·세특</a>
-        <a href="gifted.html">SW영재원</a>
-        <a href="admission.html">진학·입시</a>
-        <a href="#projects">프로젝트·성과</a>
-        <a class="btn btn-primary btn-small" href="#contact">상담하기</a>
-      </nav>
+<!-- Hero -->
+<div class="bgimg-1 w3-display-container" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <img src="./image/sunnycoding_homgpage_title.png" alt="SunnyCoding Title" class="hero-title-img" loading="eager" />
+  </div>
+</div>
+
+<!-- Quick stats & CTAs -->
+<div class="w3-center" style="margin-top:18px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; max-width:840px; margin-left:auto; margin-right:auto;">
+  <div class="brand-stat"><div class="num">6년+</div><div class="cap">SW영재원 합격 연속</div></div>
+  <div class="brand-stat"><div class="num">90%±</div><div class="cap">특성화·선린 합격률</div></div>
+  <div class="brand-stat"><div class="num">1:1</div><div class="cap">개인 로드맵·피드백</div></div>
+  <div class="brand-stat" style="grid-column:1/-1; display:flex; gap:10px; justify-content:center;">
+    <a class="w3-button brand-btn w3-padding-large" href="https://booking.naver.com/booking/10/bizes/1270009" role="button" aria-label="상담 문의">
+      <i class="fa fa-comments" aria-hidden="true"></i> 상담 문의
+    </a>
+    <a class="w3-button brand-btn-outline w3-padding-large" href="#link" role="button" aria-label="커리큘럼 보기">
+      <i class="fa fa-list-alt" aria-hidden="true"></i> 커리큘럼 보기
+    </a>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <div class="eyebrow">ABOUT</div>
+  <h2 class="w3-xxlarge" style="margin:0 0 6px"><b>아이의 속도와 과정을 존중합니다</b></h2>
+  <p class="w3-small" style="color:#6b7280;margin-bottom:18px">연구하는 교사가 직접 설계한 4단계 로드맵과 주간 피드백, 그리고 결과물이 남는 프로젝트 중심 수업.</p>
+
+  <div class="value-cards">
+    <div class="value-card"><div class="value-icon"><i class="fa fa-cogs" aria-hidden="true"></i></div><div><b>사고력 중심</b></div><div class="w3-small" style="color:#4b5563">정답·속도보다 과정을 설명하는 힘을 길러요. ‘왜 이렇게 풀었는가’를 말하게 합니다.</div></div>
+    <div class="value-card"><div class="value-icon"><i class="fa fa-book" aria-hidden="true"></i></div><div><b>맞춤 지도</b></div><div class="w3-small" style="color:#4b5563">개인 진단으로 1:1 로드맵을 설계하고 주차별 피드백으로 리듬을 만듭니다.</div></div>
+    <div class="value-card"><div class="value-icon"><i class="fa fa-laptop" aria-hidden="true"></i></div><div><b>프로젝트 기반</b></div><div class="w3-small" style="color:#4b5563">앱·웹·게임·로봇·AI 등 결과물이 남는 학습으로 포트폴리오를 채웁니다.</div></div>
+    <div class="value-card"><div class="value-icon"><i class="fa fa-star-o" aria-hidden="true"></i></div><div><b>입시·영재원 연계</b></div><div class="w3-small" style="color:#4b5563">수행평가·세특·면접까지 자연스럽게 연결되는 준비를 제시합니다.</div></div>
+  </div>
+
+  <div class="principal-card w3-margin-top">
+    <div class="principal-inner">
+      <div><img src="./image/sunnycoding_sunny.jpg" alt="써니코딩 원장" class="principal-photo" /></div>
+      <div class="principal-text">
+        <h4 class="w3-margin-top-small">원장 소개</h4>
+        <p class="w3-small" style="color:#4b5563">유아교육, 컴공 전공, 15년 개발 실무, 9년차 코딩 교육. 실무를 바탕으로 어려운 개념을 아이 눈높이 언어로 설명합니다.</p>
+        <div class="w3-margin-top" style="display:flex;flex-wrap:wrap;gap:8px">
+          <span class="badge"><i class="fa fa-flask" aria-hidden="true"></i> 연구하는 교사</span>
+          <span class="badge"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> 사고력 코칭</span>
+          <span class="badge"><i class="fa fa-code" aria-hidden="true"></i> 프로젝트 설계</span>
+        </div>
+      </div>
     </div>
-  </header>
 
-  <main id="main">
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">써니코딩컴퓨터가 증명한 교육 성과</p>
-          <h1 class="achievement-title">
-            <span><strong>6년 연속</strong> SW영재원 합격 <em>합격률 95%</em></span>
-            <span><strong>4년 연속</strong> 선린인터넷고 합격 <em>합격률 90%</em></span>
-          </h1>
-          <p class="hero-copy">
-            AI 시대, 코딩으로 우리 아이의 경쟁력을 키워주세요. 현직 개발자 부모님이 선택한 초·중·고 AI 창의융합코딩 전문 교육기관입니다.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="curriculum.html">교육과정 보기</a>
-            <a class="btn btn-secondary" href="https://map.naver.com/p/entry/place/1352502386" target="_blank" rel="noopener">상담 문의</a>
-          </div>
-          <p class="hero-note">서울 은평구 연서로 158, 3층 · 02-6396-5002</p>
-        </div>
-
-        <div class="hero-visual" aria-label="써니코딩 수업과 프로젝트">
-          <div class="hero-photo">
-            <img src="image/sunnycoding_back01.jpg" alt="써니코딩컴퓨터 코딩 수업 모습 1" loading="eager" decoding="async" />
-            <img src="image/sunnycoding_back02.jpg" alt="써니코딩컴퓨터 코딩 수업 모습 2" loading="eager" decoding="async" />
-            <img src="image/sunnycoding_back03.jpg" alt="써니코딩컴퓨터 코딩 수업 모습 3" loading="eager" decoding="async" />
-            <img src="image/KakaoTalk_20251211_194519641.jpg" alt="써니코딩컴퓨터 학생 프로젝트 활동 모습" loading="eager" decoding="async" />
-          </div>
-          <div class="hero-caption">
-            <b>1:1 로드맵</b>
-            <span>진단부터 프로젝트 완성까지 학생별 맞춤 지도</span>
-          </div>
-        </div>
+    <!-- 원장 인터뷰(요약 Q&A) -->
+    <div class="w3-margin-top">
+      <h5 class="w3-medium" style="margin:10px 0 8px; font-weight:800; color:#111827;">
+        생각을 풀어내는 과정을 지켜보는 코딩을 지도하며 사명감을 가집니다.
+      </h5>
+      <div class="qa-list">
+        <details class="qa" open>
+          <summary class="q"><span class="q-icon"><i class="fa fa-question" aria-hidden="true"></i></span>Q. 써니코딩의 설립 취지는?</summary>
+          <div class="a">A. ‘태양처럼 밝은 세상의 빛이 되고 유용한 인재’ 양성을 목표로 2020년 7월 실무 기반 커리큘럼을 구축했고, 아이들이 미래 <b>AI 창의융합형 인재</b>로 성장하도록 돕고 있습니다. 대표는 1999년 IT 창업·웹마스터 경력을 거쳐 2017년부터 코딩 교육을 시작했습니다.</div>
+        </details>
+        <details class="qa">
+          <summary class="q"><span class="q-icon"><i class="fa fa-question" aria-hidden="true"></i></span>Q. 주 서비스는?</summary>
+          <div class="a">A. <b>고등 코딩 입시</b>(특성화·선린), <b>초·중등 영재원</b>, <b>AI 창의융합(로봇)</b> 일반 과정을 운영합니다. 용어를 쉬운 언어로 풀어 설명하고, 인공지능 등 기술 변화에 맞춰 <b>커리큘럼을 지속 업그레이드</b>합니다. 모든 과정은 <b>진로 지도</b>와 연결됩니다.</div>
+        </details>
+        <details class="qa">
+          <summary class="q"><span class="q-icon"><i class="fa fa-question" aria-hidden="true"></i></span>Q. 써니코딩의 특징은?</summary>
+          <div class="a">A. 교육학 기반의 현장 경험과 ‘<b>교육의 질은 교사의 질을 넘지 못한다</b>’는 신념으로 <b>자체 교재·커리큘럼</b>을 개발합니다. 시대 흐름을 반영해 새 내용을 직접 만들고, <b>프로젝트·포트폴리오</b>로 이어갑니다.</div>
+        </details>
+        <details class="qa">
+          <summary class="q"><span class="q-icon"><i class="fa fa-question" aria-hidden="true"></i></span>Q. 운영 철학은?</summary>
+          <div class="a">A. <b>주중 집중 수업</b>을 원칙으로 하며, 대부분의 커리큘럼이 <b>진로</b>와 연결됩니다. 수업 중 학습 태도를 관찰해 보호자와 <b>코딩 역량 외 상담</b>도 함께 진행합니다. <b>미션·질문 중심</b> 수업으로 정답을 즉시 주지 않고 스스로 답을 찾는 과정을 코칭하며, 프로젝트 후 <b>회고 정리</b>로 동기부여를 강화합니다.</div>
+        </details>
+        <details class="qa">
+          <summary class="q"><span class="q-icon"><i class="fa fa-question" aria-hidden="true"></i></span>Q. 전망과 목표는?</summary>
+          <div class="a">A. ChatGPT 이후에도 <b>활용 역량</b>을 위해 코딩은 더 중요합니다. 개정 교육과정에서도 컴퓨팅 교육 비중이 증가하고 있습니다. 내년 학원 확장과 함께 개발자들과 협업해 커리큘럼을 <b>탄탄하게 고도화</b>할 계획입니다.</div>
+        </details>
+        <details class="qa">
+          <summary class="q"><span class="q-icon"><i class="fa fa-question" aria-hidden="true"></i></span>Q. 학부모님께 한 말씀</summary>
+          <div class="a">A. 아이가 <b>스스로 선택</b>할 기회를 주세요. 자유학기제(중1~중2)에 진로·적성을 찾는 것이 중요합니다. 코딩이 낯선 부모님께는 교육학 전공 개발자의 시선으로 <b>불안을 낮추는 상담</b>을 제공합니다. 써니코딩은 <b>칭찬과 격려</b>로 자신감을 키워 다른 공부에도 도전하는 동력을 만들어 줍니다.</div>
+        </details>
       </div>
-    </section>
+    </div>
+  </div>
+</div>
 
-    <section class="stats-wrap" aria-label="써니코딩 주요 성과">
-      <div class="container stats">
-        <div class="stat"><strong>6년 연속</strong><span>SW영재원 합격</span></div>
-        <div class="stat"><strong>95% 이상</strong><span>SW영재원 합격률</span></div>
-        <div class="stat"><strong>4년 연속</strong><span>선린인터넷고 합격</span></div>
-        <div class="stat"><strong>90%</strong><span>선린인터넷고 합격률</span></div>
-      </div>
-      <p class="stats-note">※ 학원 자체 집계 기준이며 연도와 지원 조건에 따라 결과는 달라질 수 있습니다.</p>
-    </section>
+</div>
+</div>
+  </div>
+</div>
 
-    <section class="section" id="focus">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">FIND YOUR PATH</p>
-          <h2>우리 아이에게 필요한 과정부터<br />확인해 보세요</h2>
-          <p>정규 코딩부터 학교 평가, 영재교육원과 진학까지 목표에 맞는 준비 과정을 안내합니다.</p>
-        </div>
+<!-- Divider -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle"><span class="w3-xxlarge w3-wide" style="color:#000; text-shadow:0 1px 2px #fff">커리큘럼 · 프로젝트</span></div>
+</div>
 
-        <div class="focus-grid">
-          <a class="focus-card" href="curriculum.html">
-            <div class="focus-icon" aria-hidden="true">01</div>
-            <h3>정규 코딩교육</h3>
-            <p>블록코딩에서 파이썬·C언어·Java, AI·로봇 프로젝트까지 단계적으로 배웁니다.</p>
-            <span class="card-link">교육과정 알아보기 <span aria-hidden="true">→</span></span>
-          </a>
+<!-- CURRICULUM -->
+<div class="w3-content w3-container w3-padding-64" id="link">
+  <h3 class="w3-center">입문→기본→심화→완성, 4단계 로드맵</h3>
+  <p class="w3-center"><em>개인 진단 → 1:1 로드맵 → 주간 피드백. 매년 AI·데이터·로봇·IoT 트렌드를 반영합니다.</em></p>
 
-          <a class="focus-card" href="school-record.html">
-            <div class="focus-icon" aria-hidden="true">02</div>
-            <h3>수행평가·세특반</h3>
-            <p>중·고등 정보 과목의 주제 선정부터 개발, 발표와 활동 정리까지 학생이 직접 완성하도록 지도합니다.</p>
-            <span class="card-link">준비 방법 알아보기 <span aria-hidden="true">→</span></span>
-          </a>
-
-          <a class="focus-card" href="gifted.html">
-            <div class="focus-icon" aria-hidden="true">03</div>
-            <h3>SW영재원</h3>
-            <p>사고력과 창의적 문제 해결, 프로젝트, 지원 준비와 면접을 하나의 흐름으로 연결합니다.</p>
-            <span class="card-link">영재원 과정 알아보기 <span aria-hidden="true">→</span></span>
-          </a>
-
-          <a class="focus-card" href="admission.html">
-            <div class="focus-icon" aria-hidden="true">04</div>
-            <h3>특성화고 진학반</h3>
-            <p>IT·SW 특성화고 진학을 위한 코딩 실력, 프로젝트 포트폴리오와 면접을 준비합니다.</p>
-            <span class="card-link">진학 과정 알아보기 <span aria-hidden="true">→</span></span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="about">
-      <div class="container reason-grid">
-        <div class="principal">
-          <img src="image/sunnycoding_sunny.jpg" alt="써니코딩컴퓨터 정선 원장" width="240" height="320" loading="lazy" />
-          <div class="principal-mark">교육학 × 컴퓨터공학<br />코딩 기본기 × AI 활용</div>
-        </div>
-
-        <div class="reason-copy">
-          <p class="eyebrow">WHY SUNNYCODING</p>
-          <h2>AI가 코딩을 잘할수록<br />기본기가 더 중요합니다</h2>
-          <p>AI는 놀라울 만큼 빠르게 코드를 만들지만, 데이터가 맞는지, 논리가 정확한지, 결과가 효율적인지는 사람이 확인해야 합니다. 교육학·컴퓨터공학을 전공한 원장이 아이가 AI의 결과를 그대로 믿지 않고 판단하고 검증할 수 있는 코딩 기본기를 직접 지도합니다.</p>
-          <p>원장이 직접 AI와 데이터 프로젝트를 개발하며 확인한 결론은 분명했습니다. 겉으로 완벽해 보이는 결과물도 코딩 지식 없이 내부의 오류를 찾아내기 어려웠고, 프로젝트가 커질수록 사람의 명확한 지시와 검증 능력이 더 중요했습니다. 그래서 써니코딩은 바이브 코딩을 서두르기보다 아이가 먼저 읽고, 생각하고, 직접 해결하는 힘을 기릅니다.</p>
-
-          <div class="reason-list">
-            <div class="reason-item"><b>원장 직접 설계</b><span>학생의 수준과 목표를 진단해 개별 커리큘럼을 설계합니다.</span></div>
-            <div class="reason-item"><b>자체 커리큘럼</b><span>학생 반응과 기술 변화를 반영해 교재와 수업을 연구합니다.</span></div>
-            <div class="reason-item"><b>프로젝트 중심</b><span>배운 내용을 앱·웹·게임·AI·로봇 결과물로 완성합니다.</span></div>
-            <div class="reason-item"><b>과정까지 연결</b><span>수행평가·세특·영재원·진학에 필요한 역량을 함께 키웁니다.</span></div>
-          </div>
-
-          <a class="btn btn-dark" href="#contact">교육 상담하기</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="ai-education">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">AI EDUCATION PRINCIPLES</p>
-          <h2>AI가 코딩하는 시대,<br />코딩을 아는 아이가 앞서갑니다</h2>
-          <p>AI에게 명확하게 지시하고, 결과를 검증하고, 잘못된 부분을 바로잡으려면 아이가 먼저 코딩의 원리와 문제 해결 과정을 배워야 합니다.</p>
-        </div>
-        <div class="ai-principles">
-          <article class="ai-principle"><b>겉모양보다 안쪽의 논리</b><p>AI가 만든 프로그램은 완벽해 보여도 데이터 누락, 잘못된 연결과 가짜 값처럼 눈에 잘 보이지 않는 오류가 남을 수 있습니다.</p></article>
-          <article class="ai-principle"><b>정확한 결과는 정확한 지시에서</b><p>프로젝트가 커질수록 무엇을 만들지, 어떤 데이터를 사용할지, 결과를 어떻게 검증할지 구체적으로 지시하는 힘이 중요합니다.</p></article>
-          <article class="ai-principle"><b>AI보다 먼저 생각하는 습관</b><p>어린 시기에 AI가 답을 대신하면 스스로 읽고 고민하고 시행착오를 겪는 학습 과정이 줄어들 수 있어 활용 시기를 구분합니다.</p></article>
-        </div>
-        <div class="age-roadmap" aria-label="학년별 AI 코딩 교육 원칙">
-          <div class="age-step"><strong>초등 5~6학년</strong><span>코딩과 데이터 가공의 기본 원리를 배우고 AI 활용의 토대를 만듭니다.</span></div>
-          <div class="age-step"><strong>중등</strong><span>충분한 기본기를 바탕으로 AI를 활용하고 결과를 검증하는 프로젝트로 확장합니다.</span></div>
-          <div class="age-step"><strong>고등</strong><span>심화 프로젝트를 수행하며 정보 과목 수행평가와 세특, 진로 포트폴리오까지 연결합니다.</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="projects">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">PROJECTS</p>
-          <h2>배운 내용은<br />눈에 보이는 결과물로</h2>
-          <p>기술을 따라 하는 데서 끝내지 않고 문제를 발견하고, 설계하고, 설명할 수 있는 프로젝트로 완성합니다.</p>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card">
-            <img src="image/project1.png" alt="온도 체크 손 소독 로봇 프로젝트" width="868" height="638" loading="lazy" />
-            <div class="project-body">
-              <div class="tags"><span class="tag">Arduino</span><span class="tag">센서</span><span class="tag">문제 해결</span></div>
-              <h3>온도 체크 손 소독 로봇</h3>
-              <p>체온 상태에 따라 표시등과 경고음, 소독 장치가 다르게 작동하도록 설계한 프로젝트입니다.</p>
-              <a class="card-link" href="https://blog.naver.com/sunnycoding/223675160099" target="_blank" rel="noopener">프로젝트 보기 <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <img src="image/project2.png" alt="데이터 과학 기반 AI 프로그램 프로젝트" width="2728" height="1992" loading="lazy" />
-            <div class="project-body">
-              <div class="tags"><span class="tag">AI</span><span class="tag">데이터</span><span class="tag">Python</span></div>
-              <h3>데이터 과학 기반 AI 프로그램</h3>
-              <p>데이터를 관찰하고 규칙을 찾아 인공지능의 기초 원리를 프로젝트로 이해합니다.</p>
-              <a class="card-link" href="https://blog.naver.com/sunnycoding/223656626179" target="_blank" rel="noopener">프로젝트 보기 <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <img src="image/project3.jpg" alt="파이썬 파이게임 프로젝트" width="706" height="389" loading="lazy" />
-            <div class="project-body">
-              <div class="tags"><span class="tag">Python</span><span class="tag">Game</span><span class="tag">텍스트 코딩</span></div>
-              <h3>파이썬 게임 개발</h3>
-              <p>블록코딩에서 텍스트 코딩으로 전환하며 직접 규칙을 설계하고 게임을 완성합니다.</p>
-              <a class="card-link" href="https://blog.naver.com/sunnycoding/223664963151" target="_blank" rel="noopener">프로젝트 보기 <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <img src="image/project4.png" alt="압력 센서를 활용한 보호장비 프로젝트" width="881" height="491" loading="lazy" />
-            <div class="project-body">
-              <div class="tags"><span class="tag">Arduino</span><span class="tag">압력 센서</span><span class="tag">모터</span></div>
-              <h3>압력 보호장비</h3>
-              <p>일정 압력을 감지하면 모터가 공기를 주입해 보호장비를 활성화하는 원리를 구현합니다.</p>
-              <a class="card-link" href="https://blog.naver.com/sunnycoding/223664963151" target="_blank" rel="noopener">프로젝트 보기 <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="results">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">RESULTS & STORIES</p>
-          <h2>꾸준한 과정이 만든<br />합격과 성장의 기록</h2>
-          <p>단기간의 결과보다 학생이 스스로 완성해 가는 힘을 중요하게 생각합니다.</p>
-        </div>
-
-        <div class="results-grid">
-          <article class="result-panel">
-            <h3>최근 합격·수상</h3>
-            <ul class="result-list">
-              <li><b>2025</b><span>교대 SW영재원 합격</span></li>
-              <li><b>2025</b><span>서울시 SW영재원 3명 합격</span></li>
-              <li><b>2025</b><span>서울시 SW영재원 금상</span></li>
-              <li><b>2025</b><span>선일초 교대 창의코딩대회 대상</span></li>
-              <li><b>2024</b><span>서울시 SW영재원 7명 합격</span></li>
-            </ul>
-            <a class="card-link" href="https://blog.naver.com/PostList.naver?blogId=sunnycoding&amp;from=postList&amp;categoryNo=18" target="_blank" rel="noopener">전체 합격·수상 보기 <span aria-hidden="true">→</span></a>
-          </article>
-
-          <article class="result-panel">
-            <h3>학부모가 전한 변화</h3>
-            <blockquote class="quote">“생각하는 힘을 키워준 수업이에요. 아이가 결과만 말하는 것이 아니라 풀이 과정을 설명하기 시작했어요.”</blockquote>
-            <p class="quote-meta">초등 6학년 학부모</p>
-            <blockquote class="quote">“취미로 시작했는데 프로젝트를 완성하면서 아이가 진로를 구체적으로 생각하게 됐어요.”</blockquote>
-            <p class="quote-meta">중등 2학년 학부모</p>
-            <a class="card-link" href="https://blog.naver.com/PostList.naver?blogId=sunnycoding&amp;from=postList&amp;categoryNo=34" target="_blank" rel="noopener">합격 수기 보기 <span aria-hidden="true">→</span></a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-cta" id="contact">
-      <div class="container cta-inner">
-        <div>
-          <h2>우리 아이는 어떤 과정부터<br />시작하면 좋을까요?</h2>
-          <p>학년, 코딩 경험과 목표를 기준으로 적합한 학습 로드맵을 안내해 드립니다.</p>
-        </div>
-        <div class="cta-actions">
-          <a class="btn btn-primary" href="tel:+82263965002">전화 상담</a>
-          <a class="btn btn-secondary" href="https://map.naver.com/p/entry/place/1352502386" target="_blank" rel="noopener">네이버 지도·상담</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <img class="footer-logo" src="image/sunnycoding_logo.png" alt="써니코딩컴퓨터학원" width="1096" height="232" loading="lazy" />
-          <p>아이의 속도와 생각하는 과정을 존중하며, 배운 내용을 프로젝트와 진로로 연결하는 코딩교육을 합니다.</p>
-        </div>
-        <div>
-          <h3>바로가기</h3>
-          <ul>
-            <li><a href="#focus">목적별 과정</a></li>
-            <li><a href="curriculum.html">교육과정</a></li>
-            <li><a href="#projects">프로젝트</a></li>
-            <li><a href="#results">합격·수상</a></li>
+  <div class="curriculum-grid" style="margin-top:18px">
+    <!-- 초등 과정 -->
+    <div class="curriculum-box">
+      <div class="curriculum-head"><span class="head-icon"><i class="fa fa-book" aria-hidden="true"></i></span><span>초등 과정 커리큘럼</span></div>
+      <div class="callout curriculum-sub"><div>코딩의 즐거움을 느끼며 <b>‘생각하는 힘’</b>을 키우는 과정</div></div>
+      <div class="track-cards">
+        <div class="track-card" style="grid-column:1/-1">
+          <div class="track-title">입문과정</div>
+          <ul class="track-list w3-small">
+            <li><b>A.I 블럭코딩</b> — A.I 모델링 학습과 블럭코딩을 활용한 프로그래밍 과정</li>
+            <li><b>3D모델링</b> — 메타버스 융합 3D모델링 과정</li>
+            <li><b>크리에이터</b> — 크리에이터 영상편집 과정</li>
           </ul>
         </div>
-        <div>
-          <h3>상담·오시는 길</h3>
-          <ul>
-            <li>서울특별시 은평구 연서로 158, 3층</li>
-            <li><a href="tel:+82263965002">02-6396-5002</a></li>
-            <li><a href="mailto:sunnycoding@naver.com">sunnycoding@naver.com</a></li>
-            <li><a href="https://blog.naver.com/sunnycoding" target="_blank" rel="noopener">네이버 블로그</a></li>
+        <div class="track-card" style="grid-column:1/-1">
+          <div class="track-title">기본과정</div>
+          <ul class="track-list w3-small">
+            <li><b>로봇 코딩</b> — 로봇을 활용한 프로그래밍 과정</li>
+            <li><b>A.I.앱개발</b> — A.I 모델링 학습과 앱인벤터의 다양한 컴포넌트를 활용하는 앱 개발</li>
+            <li><b>Python</b> — 파이썬을 활용하여 문법과 기초를 익히는 학습 과정</li>
+            <li><b>C언어</b> — 모든 언어의 기본인 C언어 학습과정</li>
+          </ul>
+        </div>
+        <div class="track-card" style="grid-column:1/-1">
+          <div class="track-title">심화과정</div>
+          <ul class="track-list w3-small">
+            <li><b>Python 심화</b> — 파이썬을 이용한 데이터 분석과 인공지능 학습과정</li>
+            <li><b>메타버스</b> — 메타버스 게임 개발 과정</li>
+            <li><b>A.I 아두이노</b> — A.I 모델링 학습과 아두이노를 활용한 프로그래밍 과정</li>
+          </ul>
+        </div>
+        <div class="track-card" style="grid-column:1/-1">
+          <div class="track-title">심화 완성과정</div>
+          <ul class="track-list w3-small">
+            <li>영재원 대비반</li>
+            <li>각종 대회 준비를 위한 프로젝트 반</li>
+            <li>자격증반</li>
           </ul>
         </div>
       </div>
-      <div class="copyright">© <span id="year"></span> SunnyCoding. All rights reserved.</div>
     </div>
-  </footer>
 
-  <script>
-    (function () {
-      var toggle = document.querySelector('.nav-toggle');
-      var menu = document.getElementById('mainMenu');
+    <!-- 중·고등 과정 -->
+    <div class="curriculum-box">
+      <div class="curriculum-head"><span class="head-icon"><i class="fa fa-cog" aria-hidden="true"></i></span><span>중·고등 과정 커리큘럼</span></div>
+      <div class="callout curriculum-sub"><div>AI, 데이터, 입시까지 한 번에 준비하는 <b>실전 코딩 로드맵</b></div></div>
+      <div class="track-cards">
+        <div class="track-card" style="grid-column:1/-1">
+          <div class="track-title">입문과정</div>
+          <ul class="track-list w3-small">
+            <li><b>A.I.앱개발</b> — A.I. 모델링 학습과 앱인벤터의 다양한 컴포넌트를 활용하는 앱 개발</li>
+            <li><b>웹 제작 입문</b> — HTML &amp; CSS를 활용한 웹페이지 제작 과정</li>
+          </ul>
+        </div>
+        <div class="track-card" style="grid-column:1/-1">
+          <div class="track-title">기본과정</div>
+          <ul class="track-list w3-small">
+            <li><b>Python</b> — 파이썬을 이용한 데이터 분석과 인공지능 학습과정</li>
+            <li><b>C언어</b> — 모든 언어의 기본인 C언어 학습과정</li>
+            <li><b>JAVA</b> — 객체지향 언어인 자바를 학습하는 과정</li>
+          </ul>
+        </div>
+        <div class="track-card" style="grid-column:1/-1">
+          <div class="track-title">심화과정</div>
+          <ul class="track-list w3-small">
+            <li><b>A.I. 아두이노</b> — A.I 기술과 아두이노를 활용하여 하드웨어 발명품 제작</li>
+            <li><b>웹 제작 심화</b> — DB·서버를 활용한 웹페이지 제작 및 출판</li>
+            <li><b>Python 심화</b> — 파이썬을 활용한 프로젝트 실습</li>
+            <li><b>게임 개발</b> — 유니티를 활용한 게임개발 과정</li>
+          </ul>
+        </div>
+        <div class="track-card" style="grid-column:1/-1">
+          <div class="track-title">심화 완성과정</div>
+          <ul class="track-list w3-small">
+            <li>영재원 대비반</li>
+            <li>각종 대회 준비를 위한 프로젝트반</li>
+            <li>특목고대비반</li>
+            <li>자격증반</li>
+            <li>SW특기자 전형 입시반</li>
+            <li>컴공세특 대비반</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      if (toggle && menu) {
-        toggle.addEventListener('click', function () {
-          var isOpen = menu.classList.toggle('open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-          toggle.setAttribute('aria-label', isOpen ? '메뉴 닫기' : '메뉴 열기');
-          toggle.textContent = isOpen ? '×' : '☰';
-        });
+  <div class="w3-row-padding" style="margin-top:12px">
+    <div class="w3-col s12">
+      <div class="personal-roadmap">
+        <h4><i class="fa fa-check-square-o" aria-hidden="true"></i> 1:1 개인 맞춤 로드맵</h4>
+        <p class="w3-small">개별 목표·기간에 맞춘 커리큘럼으로 ‘끝까지 완주’ 습관을 만듭니다.</p>
+        <div class="actions" aria-label="상담 액션">
+          <a class="w3-button brand-btn w3-padding-large" href="https://booking.naver.com/booking/10/bizes/1270009" role="button" aria-label="상담 신청으로 이동">
+            <i class="fa fa-comments" aria-hidden="true"></i> 상담 신청
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-        menu.querySelectorAll('a').forEach(function (link) {
-          link.addEventListener('click', function () {
-            menu.classList.remove('open');
-            toggle.setAttribute('aria-expanded', 'false');
-            toggle.setAttribute('aria-label', '메뉴 열기');
-            toggle.textContent = '☰';
-          });
-        });
-      }
+<!-- PROJECTS -->
+<div class="w3-content w3-container w3-padding-64" id="projects">
+  <h3 class="w3-center">프로젝트 & 포트폴리오</h3>
+  <p class="w3-center"><em>수행평가 · 세특 · 자기소개서 · 면접까지 이어지는 실전 결과물</em></p>
+  <div class="w3-row-padding">
+    <div class="w3-col m4 w3-margin-bottom"><div class="w3-card-2"><img src="./image/project1.png" style="width:100%" alt="AI 손 소독 로봇" loading="lazy"><div class="w3-container"><p><b>AI 손 소독 로봇</b></p><p class="brand-chip">Arduino·센서</p><p>초음파센서/서보모터, 앱으로 원격 제어</p></div></div></div>
+    <div class="w3-col m4 w3-margin-bottom"><div class="w3-card-2"><img src="./image/project2.png" style="width:100%" alt="압력 보호장비" loading="lazy"><div class="w3-container"><p><b>압력 보호장비</b></p><p class="brand-chip">IoT</p><p>압력센서 데이터 시각화 및 경고</p></div></div></div>
+    <div class="w3-col m4 w3-margin-bottom"><div class="w3-card-2"><img src="./image/project3.jpg" style="width:100%" alt="수어 통역 앱" loading="lazy"><div class="w3-container"><p><b>수어 통역 앱</b></p><p class="brand-chip">App</p><p>카메라 입력→간단한 인식·자막 출력</p></div></div></div>
+  </div>
+  <div class="w3-row-padding">
+    <div class="w3-col m6 w3-margin-bottom"><div class="w3-card-2"><img src="./image/project4.png" style="width:100%" alt="파이썬 게임" loading="lazy"><div class="w3-container"><p><b>파이썬 게임</b></p><p class="brand-chip">Python</p><p>조건/반복·충돌 감지·점수 시스템</p></div></div></div>
+    <div class="w3-col m6 w3-margin-bottom"><div class="w3-card-2"><img src="./image/project4.png" style="width:100%" alt="개인 웹사이트" loading="lazy"><div class="w3-container"><p><b>개인 웹사이트</b></p><p class="brand-chip">Web</p><p>자기소개·프로젝트·블로그 통합</p></div></div></div>
+  </div>
+</div>
 
-      var year = document.getElementById('year');
-      if (year) year.textContent = new Date().getFullYear();
-    }());
-  </script>
+<!-- CONTACT title divider -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle"><span class="w3-xxlarge w3-wide" style="color:#000; text-shadow:0 1px 2px#fff">입시·영재원</span></div>
+</div>
+
+<!-- ADMISSION -->
+<div class="w3-content w3-container w3-padding-64" id="admission">
+  <h3 class="w3-center">입시·영재원, 한 흐름으로 안내합니다</h3>
+  <p class="w3-center"><em>정보 교과·대회·영재원·특성화·자사·일반고 SW 전형, 대학 단계까지 단계적으로 연결.</em></p>
+
+  <div class="admission-cards" style="margin-top:16px">
+    <div class="admission-card"><span class="icon"><i class="fa fa-rocket" aria-hidden="true"></i></span><div><b>SW영재원</b><br><span class="w3-small">기초 역량→프로젝트→포트폴리오→모의면접</span></div></div>
+    <div class="admission-card"><span class="icon"><i class="fa fa-rocket" aria-hidden="true"></i></span><div><b>선린인터넷고</b><br><span class="w3-small">지원 시기·포플 구성·면접 포인트</span></div></div>
+    <div class="admission-card"><span class="icon"><i class="fa fa-rocket" aria-hidden="true"></i></span><div><b>IT 특성화고</b><br><span class="w3-small">학교별 맞춤 전략·실습 결과물 정리</span></div></div>
+  </div>
+
+  <div class="admission-grid" style="margin-top:18px">
+    <div>
+      <div class="w3-margin-bottom"><b>자주 묻는 질문</b></div>
+      <div class="faq-card w3-margin-bottom"><p><b>언제 시작하는 게 좋나요?</b></p><p class="w3-small">아이의 흥미가 생긴 시점이 가장 좋아요. 개인 진단 후 4단계 로드맵으로 바로 연결해 드립니다.</p></div>
+      <div class="faq-card w3-margin-bottom"><p><b>입시에 정말 도움이 되나요?</b></p><p class="w3-small">수행평가·세특·포트폴리오·면접에 직접 쓰일 결과물 중심으로 학습합니다.</p></div>
+      <div class="faq-card"><p><b>우리 아이도 영재원/선린이 가능할까요?</b></p><p class="w3-small">가능성 진단→준비기간·포트폴리오 구성→모의면접까지 한 흐름으로 안내합니다.</p></div>
+    </div>
+    <div class="stats-panel">
+      <div class="w3-margin-bottom"><b>성과 스냅샷</b></div>
+      <div class="stat-wrap">
+        <div class="w3-center"><div class="stat-large">6년 연속</div><div class="stat-cap">SW영재원 합격</div></div>
+        <div class="w3-center"><div class="stat-large">~95%</div><div class="stat-cap">영재원 평균 합격률</div></div>
+        <div class="w3-center"><div class="stat-large">~90%</div><div class="stat-cap">선린·특성화 합격률</div></div>
+      </div>
+      <p class="w3-small" style="margin-top:10px; color:#6b7280">※ 연도별 편차가 있을 수 있으며, 단기간 대비보다 꾸준함을 중시합니다.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT title divider -->
+<div class="bgimg-4 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle"><span class="w3-xxlarge w3-wide" style="color:#000; text-shadow:0 1px 2px #fff">학부모후기·블로그</span></div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="w3-content w3-container w3-padding-64" id="testimonials">
+  <div class="eyebrow">STORIES</div>
+  <h2 class="w3-xxlarge" style="margin:0 0 6px"><b>학부모 후기</b></h2>
+  <p class="w3-small" style="color:#6b7280">행운·감사·꿈의 키워드를 담은 실제 톤의 한 줄 후기</p>
+  <div class="testimonial-cards" style="margin-top:16px">
+    <div class="testimonial-card"><p class="w3-large" style="margin:0 0 6px">“생각하는 힘을 키워준 수업이에요.”</p><div class="w3-small" style="color:#6b7280">— 초6 학부모</div></div>
+    <div class="testimonial-card"><p class="w3-large" style="margin:0 0 6px">“취미로 시작했는데 진로가 보였어요.”</p><div class="w3-small" style="color:#6b7280">— 중2 학부모</div></div>
+    <div class="testimonial-card"><p class="w3-large" style="margin:0 0 6px">“아이 속도에 딱 맞게 이끌어 주셔서 끝까지 완주!”</p><div class="w3-small" style="color:#6b7280">— 고1 학부모</div></div>
+  </div>
+</div>
+
+
+
+<!-- BLOG -->
+<div class="w3-content w3-container w3-padding-64" id="blog">
+  <div class="eyebrow">BLOG</div>
+  <h2 class="w3-xxlarge" style="margin:0 0 6px"><b>소식·블로그</b></h2>
+  <p class="w3-small" style="color:#6b7280">은평구코딩학원·영재원·선린·초등코딩 등 지역·고민 키워드 중심 콘텐츠</p>
+  <div class="blog-cards" style="margin-top:12px">
+    <div class="blog-card"><div class="blog-meta">2025-01-15 · 학부모 고민</div><div class="blog-title">은평구 코딩학원, 언제 시작이 좋을까요?</div><div class="blog-desc">도입(공감) → 핵심 소제목 3~4개 → 이미지 → 정리/마무리의 구조를 유지하세요.</div><a href="#" class="blog-btn" role="button" aria-label="블로그 읽기"><span>〉</span> 읽기</a></div>
+    <div class="blog-card"><div class="blog-meta">2025-01-08 · 영재원</div><div class="blog-title">SW영재원 준비, 무엇부터?</div><div class="blog-desc">도입(공감) → 핵심 소제목 3~4개 → 이미지 → 정리/마무리</div><a href="#" class="blog-btn" role="button" aria-label="블로그 읽기"><span>〉</span> 읽기</a></div>
+    <div class="blog-card"><div class="blog-meta">2024-12-28 · 입시</div><div class="blog-title">선린인터넷고 포트폴리오 구성 팁</div><div class="blog-desc">도입(공감) → 핵심 소제목 3~4개 → 이미지 → 정리/마무리</div><a href="#" class="blog-btn" role="button" aria-label="블로그 읽기"><span>〉</span> 읽기</a></div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">상담 · 오시는 길</h3>
+  <p class="w3-center"><em>부담 없이 문의해 주세요. 아이의 수준과 목표에 맞춘 코딩 로드맵을 설계합니다.</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container"><div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div></div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-margin-right" aria-hidden="true"></i> 서울시 은평구 연서로 158 3층<br />
+        <i class="fa fa-phone fa-fw w3-margin-right" aria-hidden="true"></i> Phone : 02-6396-5002<br />
+        <i class="fa fa-envelope fa-fw w3-margin-right" aria-hidden="true"></i> Email : <a href="mailto:sunnycoding@naver.com">sunnycoding@naver.com</a><br />
+        <i class="fa fa-instagram fa-fw w3-margin-right" aria-hidden="true"></i> 인스타그램 : <a href="https://www.instagram.com/sunnycoding/" target="_blank" >blog.naver.com/sunnycoding</a><br />
+        <i class="fa fa-comment fa-fw w3-margin-right" aria-hidden="true"></i> Naver Blog : <a href="https://blog.naver.com/sunnycoding" target="_blank" rel="noopener">blog.naver.com/sunnycoding</a>
+      </div>
+      <p>문의 남겨 주시면 상담 드립니다. ☕</p>
+      <div class="w3-margin-top" style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="w3-button brand-btn w3-padding-large" href="https://booking.naver.com/booking/10/bizes/1270009" role="button" aria-label="전화하기">
+          <i class="fa fa-comments" aria-hidden="true"></i> 상담신청
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer" style="padding:32px 16px;">
+  <div class="w3-content w3-container">
+    <div class="footer-grid">
+      <div>
+        <div style="margin-bottom:8px;"><img src="./image/sunnycoding_logo.png" alt="써니코딩컴퓨터학원 로고" class="footer-logo" /></div>
+        <p>합격률과 성과로 증명되는 코딩학원 써니코딩은 아이에게 맞는 방향을 함께 찾아가면 좋겠습니다.</p>
+      </div>
+      <div>
+        <h5>바로가기</h5>
+        <ul class="footer-list">
+          <li><a href="#link">커리큘럼</a></li>
+          <li><a href="#projects">프로젝트</a></li>
+          <li><a href="#admission">입시·영재원</a></li>
+          <li><a href="#contact">상담·등록</a></li>
+          <li><a href="#blog">소식·블로그</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>연락처</h5>
+        <ul class="footer-list footer-icons">
+          <li><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; 02-6396-5002</li>
+          <li><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; sunnycoding@naver.com</li>
+          <li><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp; 서울 은평구 연서로 158, 3층</li>
+        </ul>
+      </div>
+      <div>
+        <h5>정책</h5>
+        <ul class="footer-list">
+          <li><a href="#">개인정보 처리방침</a></li>
+          <li><a href="#">이용약관</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span id="year"></span> SunnyCoding. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  function myMap() {
+    var myCenter = new google.maps.LatLng(37.6129325, 126.9178271);
+    var mapOptions = { center: myCenter, zoom: 15, scrollwheel: false, draggable: false, mapTypeId: google.maps.MapTypeId.ROADMAP };
+    var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+    var marker = new google.maps.Marker({ position: myCenter });
+    marker.setMap(map);
+  }
+  window.onscroll = function() { myFunction(); };
+  function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      navbar.className = "w3-bar w3-card w3-animate-top";
+    } else {
+      navbar.className = navbar.className.replace(" w3-card w3-animate-top", "");
+    }
+  }
+  function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) { x.className += " w3-show"; }
+    else { x.className = x.className.replace(" w3-show", ""); }
+  }
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "서울 은평구 써니코딩 정선 대표 인터뷰",
+  "author": {"@type": "Person", "name": "정선"},
+  "publisher": {"@type": "Organization", "name": "SunnyCoding"},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://example.com/#interview"
+  },
+  "articleSection": "INTERVIEW",
+  "about": ["코딩교육", "AI창의융합", "SW영재원"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "써니코딩의 설립 취지를 말씀해 주십시오.","acceptedAnswer": {"@type": "Answer","text": "써니코딩은 ‘태양처럼 밝은 세상의 빛이 되고 유용한 인재가 되게 하는 것’이라는 목표 아래 2020년 7월 실무 기반 커리큘럼을 구축, AI 창의융합형 인재 양성을 돕습니다."}},
+    {"@type": "Question","name": "써니코딩의 주 서비스는?","acceptedAnswer": {"@type": "Answer","text": "고등 코딩 입시(특성화·선린), 초·중등 영재원, AI 창의융합(로봇) 일반 과정을 운영하며 진로와 연계합니다."}},
+    {"@type": "Question","name": "써니코딩의 특징은?","acceptedAnswer": {"@type": "Answer","text": "교육학 기반의 연구, 자체 교재·커리큘럼, 프로젝트·포트폴리오 중심 운영으로 레벨업이 막히지 않도록 설계했습니다."}},
+    {"@type": "Question","name": "운영 철학은?","acceptedAnswer": {"@type": "Answer","text": "주중 집중 수업과 진로 연계, 미션·질문 중심 수업으로 스스로 답을 찾는 과정을 코칭합니다."}},
+    {"@type": "Question","name": "앞으로의 목표는?","acceptedAnswer": {"@type": "Answer","text": "ChatGPT 시대에 필요한 활용 역량을 키우며, 내년 학원 확장과 커리큘럼 고도화를 계획합니다."}}
+  ]
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcPf9E3ib0x4VS321Hm6Pz4pSxLTzOvrY&callback=myMap" async defer></script>
 </body>
 </html>
