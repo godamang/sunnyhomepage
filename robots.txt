@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# 백업 파일은 검색 노출에서 제외
+Disallow: /index.backup-20260716.html
+
+Sitemap: https://www.sunnycoding.co.kr/sitemap.xml

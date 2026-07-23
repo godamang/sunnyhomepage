@@ -51,7 +51,7 @@
     img{max-width:100%;display:block}a{color:inherit;text-decoration:none}.container{width:min(calc(100% - 40px),var(--max));margin:auto}
     .skip{position:absolute;left:-9999px}.skip:focus{left:8px;top:8px;z-index:9999;background:#fff;padding:10px;border:2px solid var(--navy)}
     .header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
-    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo img{width:180px}.links{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:800;white-space:nowrap}.links a:hover,.links .active{color:#5964a3}.links .home-link{padding:8px 14px;border:1px solid var(--navy);border-radius:999px;color:var(--navy)}.links .home-link:hover{background:var(--navy);color:#fff}.links .btn{min-height:40px;padding:8px 16px}.toggle{display:none;width:44px;height:44px;border:0;border-radius:12px;background:var(--bg);color:var(--navy);font-size:22px}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo img{width:180px;height:auto}.links{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:800;white-space:nowrap}.links a:hover,.links .active{color:#5964a3}.links .btn{min-height:40px;padding:8px 16px}.toggle{display:none;width:44px;height:44px;border:0;border-radius:12px;background:var(--bg);color:var(--navy);font-size:22px}
     .btn{min-height:40px;display:inline-flex;align-items:center;justify-content:center;padding:8px 16px;border:1px solid transparent;border-radius:999px;font-weight:900}.btn-yellow{background:var(--yellow);color:var(--dark)}.btn-line{border-color:var(--navy);background:#fff;color:var(--navy)}
     .page-hero{padding:70px 0 60px;background:linear-gradient(135deg,#fff 0%,#fffdf0 55%,#f3f4fa 100%)}
     .crumb{margin-bottom:18px;color:var(--muted);font-size:13px}.crumb a{color:var(--navy);font-weight:800}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:56px}.eyebrow{margin:0 0 10px;color:#5964a3;font-size:13px;font-weight:900;letter-spacing:.08em}.page-hero h1{margin:0;color:var(--dark);font-size:clamp(38px,5vw,58px);line-height:1.16;letter-spacing:-.04em}.page-hero h1 span{box-shadow:inset 0 -12px var(--yellow)}.lead{max-width:650px;margin:20px 0 0;color:#515970;font-size:17px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.hero-panel{padding:28px;border-radius:24px;background:var(--navy);color:#fff;box-shadow:var(--shadow)}.hero-panel b{display:block;margin-bottom:14px;color:var(--yellow);font-size:20px}.hero-panel ol{margin:0;padding-left:22px}.hero-panel li+li{margin-top:8px}.hero-panel small{display:block;margin-top:15px;color:rgba(255,255,255,.63)}
@@ -79,12 +79,11 @@
       <a class="logo" href="index.html" aria-label="써니코딩컴퓨터 홈"><img src="image/sunnycoding_logo.png" alt="써니코딩컴퓨터학원" width="1096" height="232" /></a>
       <button class="toggle" type="button" aria-label="메뉴 열기" aria-expanded="false">☰</button>
       <nav class="links" id="menu" aria-label="주요 메뉴">
-        <a class="home-link" href="index.html">홈</a>
-        <a class="active" href="curriculum.html">교육과정</a>
-        <a href="school-record.html">수행평가</a>
-        <a href="gifted.html">영재원</a>
-        <a href="admission.html">진학</a>
-        <a class="btn btn-yellow" href="#contact">상담</a>
+        <a href="index.html">홈</a>
+        <a href="school-record.html">수행평가·세특</a>
+        <a href="gifted.html">SW영재원</a>
+        <a href="admission.html">특성화고 진학반</a>
+        <a class="btn btn-yellow" href="https://map.naver.com/p/entry/place/1352502386" target="_blank" rel="noopener" aria-label="네이버에서 상담하기">상담하기</a>
       </nav>
     </div>
   </header>
@@ -190,7 +189,7 @@
       </div>
     </section>
 
-    <section class="cta" id="contact"><div class="container cta-inner"><div><h2>어떤 과정부터 시작할지<br />함께 확인해 보세요</h2><p>학년, 코딩 경험과 목표를 바탕으로 학생에게 맞는 시작점을 안내합니다.</p></div><div class="cta-actions"><a class="btn btn-yellow" href="tel:+82263965002">전화 상담</a><a class="btn btn-line" href="https://map.naver.com/p/entry/place/1352502386" target="_blank" rel="noopener">네이버 지도·상담</a></div></div></section>
+    <section class="cta" id="contact"><div class="container cta-inner"><div><h2>어떤 과정부터 시작할지<br />함께 확인해 보세요</h2><p>학년, 코딩 경험과 목표를 바탕으로 학생에게 맞는 시작점을 안내합니다.</p></div><div class="cta-actions"><a class="btn btn-yellow" href="tel:+82263965002">전화 상담</a><a class="btn btn-line" href="https://map.naver.com/p/entry/place/1352502386" target="_blank" rel="noopener" aria-label="네이버에서 상담 예약하기">상담 예약</a></div></div></section>
   </main>
 
   <footer class="footer"><div class="container"><div class="footer-grid"><div><img class="footer-logo" src="image/sunnycoding_logo.png" alt="써니코딩컴퓨터학원" width="1096" height="232" /><p>배운 내용을 프로젝트와 진로로 연결하는 초·중·고 코딩 전문교육</p></div><div><strong>전문 과정</strong><ul><li><a href="school-record.html">수행평가·세특</a></li><li><a href="gifted.html">SW영재원</a></li><li><a href="admission.html">진학·입시</a></li></ul></div><div><strong>상담·오시는 길</strong><ul><li>서울 은평구 연서로 158, 3층</li><li><a href="tel:+82263965002">02-6396-5002</a></li><li><a href="mailto:sunnycoding@naver.com">sunnycoding@naver.com</a></li></ul></div></div><div class="copy">© <span id="year"></span> SunnyCoding. All rights reserved.</div></div></footer>
